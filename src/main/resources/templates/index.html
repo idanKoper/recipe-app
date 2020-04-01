@@ -5,7 +5,18 @@
     <title>Recipe Home</title>
 </head>
 <body>
-    <h1>My Recipes!!</h1>
+<u style="font-size:30px">My Recipes!!</u>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+    </tr>
+    <tr th:each="recipe : ${recipes}">
+        <td style="width:30px" th:text="${recipe.id}">RecipeId</td>
+        <td style="width:120px"th:text="${recipe.description}">DescriptionEachRecipe</td>
+    </tr>
+</table>
 </body>
 
 </html>
