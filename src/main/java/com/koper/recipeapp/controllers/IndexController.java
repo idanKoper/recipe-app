@@ -1,17 +1,13 @@
 package com.koper.recipeapp.controllers;
 
-import com.koper.recipeapp.model.Category;
-import com.koper.recipeapp.model.UnitOfMeasure;
-import com.koper.recipeapp.repositories.CategoryRepository;
-import com.koper.recipeapp.repositories.UnitOfMeasureRepository;
 import com.koper.recipeapp.service.RecipeService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.Optional;
-
+@Slf4j
 @Controller
 public class IndexController {
 
@@ -21,6 +17,7 @@ public class IndexController {
     @RequestMapping({"","/","/index"})
     public String getIndex(Model model){
         model.addAttribute("recipes",recipeService.getRecipes());
+        log.debug("Getting Index Page");
         return "index";
     }
 
