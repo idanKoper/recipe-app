@@ -2,6 +2,7 @@ package com.koper.recipeapp.service;
 
 import com.koper.recipeapp.model.Recipe;
 import com.koper.recipeapp.repositories.RecipeRepository;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 @Slf4j
 @Service
+@AllArgsConstructor
 public class RecipeServiceImpl implements RecipeService {
 
     @Autowired
